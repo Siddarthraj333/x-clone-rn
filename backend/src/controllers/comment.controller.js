@@ -5,7 +5,7 @@ import Post from "../models/post.model.js";
 import User from "../models/user.model.js";
 import Notification from "../models/notification.model.js";
 
-export const getComments = asyncHandler(async (req, res) =>{
+export const getComment = asyncHandler(async (req, res) =>{
     const { postId } = req.params;
 
     const comments = await Comment.find({ post: postId})
